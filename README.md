@@ -43,9 +43,6 @@ cmd: delete {id}
 
 rvalue: status code (always) and message if error  
 
-## Goal:
-Compose a string that tells how many people were killed by the virus in the city.  
-
 ## Example input: 
 Input: get  
 Output: []  
