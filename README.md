@@ -51,6 +51,10 @@ Output:OK(200)
 Input: get  
 Output: [{"dataId": "asd", "weight": 13}]  
 Input: get --id asd  
-Output: {"dataId": "asd", "weight": 13}    
+Output: {"dataId": "asd", "weight": 13}   
+Input: get --id asd2  
+Output: 404(Not Found)  
 Input: delete asd  
 Output: OK(200)  
+Input: get
+Output: []
