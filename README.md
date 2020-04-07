@@ -1,28 +1,56 @@
-# Task 1
+Http practice
 
 ## Prerequisites:
-Read Chapter 5 of .NET Book Zero and https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated
+Have CampusRestHW.exe
 
 ## Description:
-There is a city in Programland with the name [task.City.Name] and [task.City.Population] people living in it.
-There are [task.City.SickPercentage] people that are sick with a deadly virus with the name [task.Virus.Name].
-The probability of death is [task.Virus.KillProbability].
+Create console app with functionality to make http request to following endpoints:
+
+Required headers (all requests):
+ - Content-Type : application/json
+ - appId : campus-task
+
+[GET]
+http://localhost:60214/somedata
+http://localhost:60214/somedata?sorted=True
+http://localhost:60214/somedata/{id}
+cmd: get
+flags: --sorted (True/False) ; --id (dataId)
+rvalue: error code and message if any, or data specific to request
+
+[POST]
+http://localhost:60214/somedata
+cmd: post {data}
+data required field:
+	"dataId": string
+	"weight": int
+
+rvalue: status code (always) and message if error
+
+[PUT]
+http://localhost:60214/somedata/{id}
+cmd: put {id} {data}
+data required field:
+	"dataId": string
+	"weight": int
+
+rvalue: status code (always) and message if error
+
+
+[DELETE]
+http://localhost:60214/somedata/{id}
+cmd: delete {id}
+
+rvalue: status code (always) and message if error
 
 ## Goal:
 Compose a string that tells how many people were killed by the virus in the city.
 
 ## Example input: 
-[task.City.Name] = "Virtualiev"  
-[task.City.Population] = 1400  
-[task.City.SickPercentage] = 0.3  
-[task.Virus.Name] = "Hlomanda"  
-[task.Virus.KillProbability] = 0.2  
+>> get   (output)-->    >> []
+>> post {"dataId": "asd", "weight": 13}      -->     >> OK(200)
+>> get    -->      >> [{"dataId": "asd", "weight": 13}]
+>> get --id asd    >> {"dataId": "asd", "weight": 13}
+>> delete asd      >> OK(200)
 
-## Example output:
-"There are 420 people sick with Hlomanda in the city of Virtualiev, 84 of which died"
 
-## Task clarifications:
-Input variables that contains only numbers should be parsed to _floats_.  
-Use _floats_ in all your floating-point calculations.  
-Don't round any intermediate results.  
-Numbers, if needed, should be rounded by Math.Truncate().
