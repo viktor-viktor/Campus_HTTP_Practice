@@ -53,4 +53,3 @@ Compose a string that tells how many people were killed by the virus in the city
 >> get --id asd    >> {"dataId": "asd", "weight": 13}
 >> delete asd      >> OK(200)
 
-
