@@ -47,13 +47,13 @@ rvalue: status code (always) and message if error
 Compose a string that tells how many people were killed by the virus in the city.  
 
 ## Example input: 
-Input: get
-Output: []
-Input: post {"dataId": "asd", "weight": 13}
-Output:OK(200)
-Input: get
-Output: post [{"dataId": "asd", "weight": 13}]
-Input: get --id asd
-Output: {"dataId": "asd", "weight": 13}  
-Input: delete asd
-Output: OK(200)
+Input: get  
+Output: []  
+Input: post {"dataId": "asd", "weight": 13}  
+Output:OK(200)  
+Input: get  
+Output: post [{"dataId": "asd", "weight": 13}]  
+Input: get --id asd  
+Output: {"dataId": "asd", "weight": 13}    
+Input: delete asd  
+Output: OK(200)  
