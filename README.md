@@ -1,7 +1,7 @@
 Http practice
 
 ## Prerequisites:
-Have CampusRestHW.exe
+Unpack netcoreapp3.1.zip , run CampusRestHW.exe
 
 ## Description:
 Create console app with functionality to make http request to following endpoints:
@@ -22,8 +22,8 @@ rvalue: error code and message if any, or data specific to request
 http://localhost:60214/somedata  
 cmd: post {data}  
 data required field:  
-   "dataId": string  
-   "weight": int  
+ - "dataId": string  
+ - "weight": int  
 
 rvalue: status code (always) and message if error  
   
@@ -31,8 +31,8 @@ rvalue: status code (always) and message if error
 http://localhost:60214/somedata/{id}  
 cmd: put {id} {data}  
 data required field:  
-   "dataId": string  
-   "weight": int  
+ - "dataId": string  
+ - "weight": int  
 
 rvalue: status code (always) and message if error  
 
@@ -47,9 +47,13 @@ rvalue: status code (always) and message if error
 Compose a string that tells how many people were killed by the virus in the city.  
 
 ## Example input: 
->> get   (output)-->    >> []  
->> post {"dataId": "asd", "weight": 13}      -->     >> OK(200)  
->> get    -->      >> [{"dataId": "asd", "weight": 13}]  
->> get --id asd    >> {"dataId": "asd", "weight": 13}  
->> delete asd      >> OK(200)  
-
+Input: get
+Output: []
+Input: post {"dataId": "asd", "weight": 13}
+Output:OK(200)
+Input: get
+Output: post [{"dataId": "asd", "weight": 13}]
+Input: get --id asd
+Output: {"dataId": "asd", "weight": 13}  
+Input: delete asd
+Output: OK(200)
