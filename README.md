@@ -43,13 +43,13 @@ cmd: delete {id}
 
 rvalue: status code (always) and message if error  
 
-## Example input: 
+## Example cmd input -> output: 
 Input: get  
 Output: []  
 Input: post {"dataId": "asd", "weight": 13}  
 Output:OK(200)  
 Input: get  
-Output: post [{"dataId": "asd", "weight": 13}]  
+Output: [{"dataId": "asd", "weight": 13}]  
 Input: get --id asd  
 Output: {"dataId": "asd", "weight": 13}    
 Input: delete asd  
