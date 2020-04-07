@@ -3,6 +3,11 @@ Http practice
 ## Prerequisites:
 Unpack netcoreapp3.1.zip , run CampusRestHW.exe
 
+You may use following libraries for making http requests:  
+Python - https://requests.readthedocs.io/en/master/user/quickstart/#make-a-request  
+C++ - any curl library you may find (libcurl for example)  
+C# - Use HttpClient (http://zetcode.com/csharp/httpclient/)  
+
 ## Description:
 Create console app with functionality to make http request to following endpoints:
 
