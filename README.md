@@ -22,8 +22,8 @@ rvalue: error code and message if any, or data specific to request
 http://localhost:60214/somedata  
 cmd: post {data}  
 data required field:  
-	"dataId": string  
-	"weight": int  
+   "dataId": string  
+   "weight": int  
 
 rvalue: status code (always) and message if error  
   
@@ -31,8 +31,8 @@ rvalue: status code (always) and message if error
 http://localhost:60214/somedata/{id}  
 cmd: put {id} {data}  
 data required field:  
-	"dataId": string  
-	"weight": int  
+   "dataId": string  
+   "weight": int  
 
 rvalue: status code (always) and message if error  
 
